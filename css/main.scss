@@ -108,6 +108,7 @@
 // 外部ファイルscssは共通パーツ(ブログカード)やフォント、レスポンシブ時の変化を記載しておく
 
 @import "style";
+@import "responsive";
 
 *{
     box-sizing: border-box;
@@ -132,10 +133,11 @@ a {
 
 .container{
     max-width:1180px;
-    width: 100%;
+    // width: 100%;
+    width: 92%;
     height: 100%;
     margin: 0 auto;
-    border:2px solid black;
+
 }
 
 .flex{
@@ -154,7 +156,7 @@ header{
     top: 0px;
     left: 0px;
     z-index: 10;
-    @include Btn
+    @include Btn('top');
 }
 
 
@@ -214,7 +216,7 @@ header{
 .secttion__two{
     width: 100%;
     /* 初期確認用 */
-    border: 2px solid #333333;
+
     .container{
         display: flex;
         justify-content: space-between;
@@ -241,7 +243,7 @@ header{
 .secttion__three{
     width: 100%;
     /* 初期確認用 */
-    border: 2px solid #333333;
+
     .container{
         display: flex;
         flex-flow: row-reverse;
@@ -274,7 +276,7 @@ header{
 .secttion__four{
     width: 100%;
     /* 初期確認用 */
-    border: 2px solid #333333;
+
     .container{
         display: flex;
         justify-content: space-between;
@@ -293,12 +295,12 @@ header{
                 @include Menu;
             }
             .Reservation{
-                padding-top: 145px;
-                @include Btn
+                @include Btn('none');
+                display: none;
             }
         }
         .content-image {
-            padding-bottom: 180px;
+            padding-bottom: 37px;
             .image-one{
                 padding-right: 34.5px;
             }
@@ -309,9 +311,27 @@ header{
     }
 }
 
-
-
-
+.secttion__btn{
+    padding-bottom: 110px;
+    .container{
+        display: flex;
+    }
+    @include Btn('under');
+    h2{
+        margin-right: 0;
+        margin-left: 27%;
+        max-width: 224px;
+        width: 100%;
+        height: 50px;
+    }
+    hr{
+        height: 3px;
+        display: block;
+        background-color: $btn--color;
+        width: 100%;
+        margin:auto 0;
+    }
+}
 
 
 
@@ -329,8 +349,30 @@ header{
 footer{
     width: 100%;
     /* 初期確認用 */
-    background-color: red;
-    height: 100px;
+    background-color: $gnavi--color;
+    height: 275px;
+    .gloabal-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 50px;
+    }
+    .fnavi{
+        width: 357px;
+        
+        .fnavi-column{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 30px;
+        }
+    }
+    .footer-logo{
+        padding-right: 100px;
+    }
+    .copy{
+        text-align: right;
+        padding-right: 100px;
+    }
 }
 
 

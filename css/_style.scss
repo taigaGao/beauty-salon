@@ -1,4 +1,4 @@
-@import "responsive";
+
 // 共通のプロパティを管理
 
 // メイン背景色// #FFFFFF
@@ -39,7 +39,7 @@ $copy--color: #797979;
             display: block;
             margin-right: 30px;
         }
-    } @else {
+    }  @else {
         h2:after{
             content: "";
             flex-grow: 1;
@@ -83,14 +83,19 @@ $copy--color: #797979;
     }
 }
 
-@mixin Btn{
+@mixin Btn($position){
     h2 {
         background-color: $btn--color;
         color: $bg--color;
         width: 251px;
         line-height: 60px;
-        margin-left: auto;
-        margin-right: 0;
         text-align: center;
+            @if $position == top {
+                margin-left: auto;
+                margin-right: 0;
+            } @elseif $position == none {
+                margin: 0 auto;
+                display: none;
+            } 
         }
 }
