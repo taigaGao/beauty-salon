@@ -1,0 +1,150 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "ヒラギノ明朝 Pro" "ヒラギノ明朝 ProN" "Times" "sans-serif";
+  background-color: #FFFFFF;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ======================================================
+ヘッダー
+========================================================= */
+/* 初期確認用 */
+header {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+
+h2 {
+  background-color: #C88D95;
+  color: #FFFFFF;
+  width: 251px;
+  line-height: 60px;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: center;
+}
+
+/* ======================================================
+メイン
+========================================================= */
+/* 初期確認用 */
+.main {
+  width: 100%;
+  /* 初期確認用 */
+  background-color: green;
+  top: 100px;
+  left: 0px;
+}
+
+/* ======================================================
+セクション①
+========================================================= */
+.secttion__one {
+  width: 100%;
+  background-color: white;
+  /* ヘッダー一固定調整用 */
+  margin-top: 60px;
+}
+
+.gnavi .menu {
+  background-color: #F4F4F4;
+  padding: 60px 10px 70px 60px;
+  margin-left: -60px;
+}
+
+.gnavi .menu ul li {
+  line-height: 24px;
+  font-size: 20px;
+  padding-bottom: 40px;
+}
+
+.gnavi .sns {
+  padding: 0px 30px 0 0;
+  font-size: 24px;
+}
+
+.gnavi .sns i {
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.mv {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.mv img {
+  width: 100%;
+}
+
+/* ======================================================
+セクション②
+========================================================= */
+.secttion__two {
+  width: 100%;
+  /* 初期確認用 */
+  background-color: white;
+  height: 300px;
+  border: 2px solid #333333;
+}
+
+/* ======================================================
+セクション③
+========================================================= */
+.secttion__three {
+  width: 100%;
+  /* 初期確認用 */
+  background-color: white;
+  height: 300px;
+  border: 2px solid #333333;
+}
+
+/* ======================================================
+セクション④
+========================================================= */
+.secttion__four {
+  width: 100%;
+  /* 初期確認用 */
+  background-color: white;
+  height: 300px;
+  border: 2px solid #333333;
+}
+
+/* ======================================================
+フッター
+========================================================= */
+/* 初期確認用 */
+footer {
+  width: 100%;
+  /* 初期確認用 */
+  background-color: red;
+  height: 100px;
+}

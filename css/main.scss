@@ -1,0 +1,280 @@
+// ================================================================================================
+// 目次
+// ①基本的な書き方(入れ子構造)
+// ②hoverやactiveする時の書き方
+// ③複数同名要素がある時の特定のクラスの指定
+// ④変数の定義 ※この定義よりも下でしか変数は使えない
+// ⑤mixin(コードを1つにまとめて、複数箇所で簡単に呼び出すことができる機能)
+// ⑥mixinは、使用したいSassファイルの中で「@include mixin名」とすることで使うことができる
+// ⑦mixinで引数を受け取れるようにする
+// ⑧便利な関数 例)色を操作する関数
+// ⑨外部ファイルの読み込み
+// ================================================================================================
+// ①基本的な書き方(入れ子構造)
+// .main {
+//     margin: 20px;
+//     h1 { // h1タグに対するコード(子要素はインデントを下げる)
+//       color: #f8f8f8;
+//     }
+//     p {  // pタグに対するコード(子要素はインデントを下げる)
+//       color: #efefef;
+//     }
+//   }
+// ②hoverやactiveする時の書き方
+// .button {
+//      ボタンのプロパティ
+//     &:hover{
+//       buttonにカーソルを合わせた時のコード
+//     }
+//     &:active{    
+//       buttonクリックした時のコード
+//     }
+//   }
+// }
+//
+// .main {
+//     margin: 20px;
+//     .title {
+//       省略
+//     }
+//     li {
+//       省略
+//       &.current-page{    ③複数同名要素がある時の特定のクラスの指定
+//         省略
+//       }
+//     }
+//   }
+// $wanko-color:#7579a3;    ④変数の定義 ※この定義よりも下でしか変数は使えない
+// .main {
+//     省略
+//     .title {
+//       color:$wanko-color; // 文字の色に変数$wanko-colorの値を指定してください
+//     }
+//   }
+//
+//⑤mixin(コードを1つにまとめて、複数箇所で簡単に呼び出すことができる機能)
+// @mixin circle{   //@mixin mixin名 { コード } で定義
+//     display: inline-block;
+//     border-radius: 50%;
+//     margin-left: 10px;
+//     text-align: center;
+//     background-color: #888888;
+//   }
+//⑥mixinは、使用したいSassファイルの中で「@include mixin名」とすることで使うことができる
+// .main {
+//     margin: 20px 10px;
+//     .small {
+//       @include circle; // ↑↑定義したcircleの呼び出し"circle"で定義されたプロパティが読み込まれる
+//       width: 34px;
+//       height: 34px;
+//     }
+//   }
+//
+//⑦mixinで引数を受け取れるようにする
+// @mixin circle($color) {  // 引数$colorを受け取れるようする
+//     display: inline-block;
+//     省略
+//     background-color: $color;    // 引数$colorを用いて背景色を変更
+//   }
+//   .main {
+//     margin: 20px 10px;
+//     .small {
+//       @include circle(#20efae); // 引数に「#20efae」を指定 ↑↑mixinのcircle($color)をcircle(#20efae)として使える
+//       width: 34px;
+//       height: 34px;
+//     }
+//   }
+// ⑧便利な関数 例)色を操作する関数
+// $blue: #0ac4ff;
+// .main {
+//     li {
+//       省略
+//     }
+//     .blue1 {
+//       background-color: $blue;
+//     }
+//     .blue2 {
+//       
+//       background-color:darken($blue,10%);    // 色を$blue、darken関数で値を10%暗くする
+//     }
+//     .blue3 {
+//       background-color:darken($blue,20%);    // 色を$blue、darken関数で値を20%暗くする
+//     }
+//   }
+// ⑨外部ファイルの読み込み
+// @import "variables"; 「_variables.scss」を読み込む ファイル名は先頭に"_"と末尾に拡張子scssが必要だが読み込み時は不要
+// 外部ファイルに変数やレスポンシブ用のmixinを定義しておいて使う
+// メインscssファイルはwebページの骨組み
+// 外部ファイルscssは共通パーツ(ブログカード)やフォント、レスポンシブ時の変化を記載しておく
+
+@import "responsive";
+@import "style";
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 
+    "ヒラギノ明朝 Pro"
+    "ヒラギノ明朝 ProN"
+    "Times"
+    "sans-serif";
+    background-color: $bg--color;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container{
+    max-width:1180px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border:2px solid black;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ======================================================
+ヘッダー
+========================================================= */
+/* 初期確認用 */
+header{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+} h2 {
+    background-color: $btn--color;
+    color: $bg--color;
+    width: 251px;
+    line-height: 60px;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: center;
+}
+
+
+
+
+
+/* ======================================================
+メイン
+========================================================= */
+/* 初期確認用 */
+.main{
+    width: 100%;
+    /* 初期確認用 */
+    background-color: green;
+    top: 100px;
+    left: 0px;
+}
+
+
+/* ======================================================
+セクション①
+========================================================= */
+.secttion__one{
+    width: 100%;
+    background-color: white;
+    /* ヘッダー一固定調整用 */
+    margin-top: 60px;
+} .gnavi {
+    
+    img{
+
+    }
+    .menu{
+        background-color: $gnavi--color;
+        padding :60px 10px 70px 60px;
+        margin-left: -60px;
+        ul li{
+            line-height: 24px;
+            font-size: 20px;
+            padding-bottom: 40px;
+        }
+    } .sns {
+        padding :0px 30px 0 0;
+        font-size: 24px;
+        i{
+            padding-right: 30px;
+            padding-bottom: 30px;
+        }
+    }
+} .mv {
+    margin-left:auto;
+    margin-right: 0;
+    img {
+        width: 100%;
+    }
+}
+
+
+/* ======================================================
+セクション②
+========================================================= */
+.secttion__two{
+    width: 100%;
+    /* 初期確認用 */
+    background-color: white;
+    height: 300px;
+    border: 2px solid #333333;
+}
+
+/* ======================================================
+セクション③
+========================================================= */
+.secttion__three{
+    width: 100%;
+    /* 初期確認用 */
+    background-color: white;
+    height: 300px;
+    border: 2px solid #333333;
+}
+
+/* ======================================================
+セクション④
+========================================================= */
+.secttion__four{
+    width: 100%;
+    /* 初期確認用 */
+    background-color: white;
+    height: 300px;
+    border: 2px solid #333333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================
+フッター
+========================================================= */
+  /* 初期確認用 */
+footer{
+    width: 100%;
+    /* 初期確認用 */
+    background-color: red;
+    height: 100px;
+}
+
+
