@@ -22,28 +22,42 @@ $copy--color: #797979;
 
 
 //セクション分割ライン
-@mixin Heading {
+@mixin Heading($before) {
     h2{
         font-size: 40px;
         color: $mfont--color;
         display: flex;
         align-items: center;
         max-width: 560px;
-    }
-    h2:before{
-        content: "";
-        flex-grow: 1;
-        height: 3px;
-        background: $btn--color;
-        display: block;
-        margin-right: 30px;
+    } @if $before == before {
+        h2:before{
+            content: "";
+            flex-grow: 1;
+            height: 3px;
+            background: $btn--color;
+            display: block;
+            margin-right: 30px;
+        }
+    } @else {
+        h2:after{
+            content: "";
+            flex-grow: 1;
+            height: 3px;
+            background: $btn--color;
+            display: block;
+            margin-left: 30px;
+        }
     }
 }
 
-@mixin Message {
+@mixin Message($before) {
     p{
         font-size: 18px;
-        text-align-last: right;
         line-height: 44px;
+        @if $before == before {
+            text-align-last: right;
+        } @else {
+            ext-align-last: left;
+        }
     }
 }

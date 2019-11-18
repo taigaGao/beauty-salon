@@ -149,8 +149,8 @@ header h2 {
 
 .secttion__two .container .content .content__message p {
   font-size: 18px;
-  text-align-last: right;
   line-height: 44px;
+  text-align-last: right;
 }
 
 /* ======================================================
@@ -164,6 +164,7 @@ header h2 {
 
 .secttion__three .container {
   display: flex;
+  flex-flow: row-reverse;
   justify-content: space-between;
   align-items: center;
   padding-top: 140px;
@@ -186,19 +187,19 @@ header h2 {
   max-width: 560px;
 }
 
-.secttion__three .container .content .heading h2:before {
+.secttion__three .container .content .heading h2:after {
   content: "";
   flex-grow: 1;
   height: 3px;
   background: #C88D95;
   display: block;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 
 .secttion__three .container .content .content__message p {
   font-size: 18px;
-  text-align-last: right;
   line-height: 44px;
+  ext-align-last: left;
 }
 
 /* ======================================================
@@ -245,8 +246,8 @@ header h2 {
 
 .secttion__four .container .content .content__message p {
   font-size: 18px;
-  text-align-last: right;
   line-height: 44px;
+  text-align-last: right;
 }
 
 /* ======================================================

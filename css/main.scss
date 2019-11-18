@@ -237,11 +237,11 @@ header{
             max-width: 550px;
             width: 100%;
             .heading{
-                @include Heading;
+                @include Heading('before');
                 padding-bottom: 48px;
             }
             .content__message{
-                @include Message;
+                @include Message('before');
             }
         }
     }
@@ -257,6 +257,7 @@ header{
     border: 2px solid #333333;
     .container{
         display: flex;
+        flex-flow: row-reverse;
         justify-content: space-between;
         align-items: center;
         padding-top: 140px;
@@ -264,11 +265,11 @@ header{
             max-width: 550px;
             width: 100%;
             .heading{
-                @include Heading;
+                @include Heading('after');
                 padding-bottom: 48px;
             }
             .content__message{
-                @include Message;
+                @include Message('after');
             }
         }
     }
@@ -290,11 +291,11 @@ header{
             max-width: 550px;
             width: 100%;
             .heading{
-                @include Heading;
+                @include Heading('before');
                 padding-bottom: 48px;
             }
             .content__message{
-                @include Message;
+                @include Message('before');
             }
         }
     }
