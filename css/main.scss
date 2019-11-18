@@ -115,9 +115,9 @@
 
 body {
     font-family: 
+    "Times"
     "ヒラギノ明朝 Pro"
     "ヒラギノ明朝 ProN"
-    "Times"
     "sans-serif";
     background-color: $bg--color;
 }
@@ -154,15 +154,7 @@ header{
     top: 0px;
     left: 0px;
     z-index: 10;
-    h2 {
-    background-color: $btn--color;
-    color: $bg--color;
-    width: 251px;
-    line-height: 60px;
-    margin-left: auto;
-    margin-right: 0;
-    text-align: center;
-    }
+    @include Btn
 }
 
 
@@ -176,7 +168,6 @@ header{
 .main{
     width: 100%;
     /* 初期確認用 */
-    background-color: green;
     top: 100px;
     left: 0px;
 }
@@ -191,10 +182,6 @@ header{
     /* ヘッダー一固定調整用 */
     margin-top: 60px;
 } .gnavi {
-    
-    img{
-
-    }
     .menu{
         background-color: $gnavi--color;
         padding :60px 10px 70px 60px;
@@ -272,6 +259,12 @@ header{
                 @include Message('after');
             }
         }
+        .content-image {
+            width: 570px;
+            height: 380px;
+        } img {
+            width: 100%;
+        }
     }
 }
 
@@ -294,8 +287,23 @@ header{
                 @include Heading('before');
                 padding-bottom: 48px;
             }
-            .content__message{
-                @include Message('before');
+            .content__menu{
+                width: 90%;
+                margin: 0 auto;
+                @include Menu;
+            }
+            .Reservation{
+                padding-top: 145px;
+                @include Btn
+            }
+        }
+        .content-image {
+            padding-bottom: 180px;
+            .image-one{
+                padding-right: 34.5px;
+            }
+            .image-two{
+                padding-bottom: 10px;
             }
         }
     }

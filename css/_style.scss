@@ -29,6 +29,7 @@ $copy--color: #797979;
         display: flex;
         align-items: center;
         max-width: 560px;
+        font-family: Times;
     } @if $before == before {
         h2:before{
             content: "";
@@ -60,4 +61,36 @@ $copy--color: #797979;
             ext-align-last: left;
         }
     }
+}
+
+@mixin Menu {
+    .course{
+        display: flex;
+        border-bottom: 1px solid $under--color;
+        font-size: 18px;
+        padding-bottom: 7px;
+        margin-bottom: 18px;
+        .course-item{
+            padding-left: 15px;
+            margin-left: 0;
+            margin-right: auto;
+        }
+        .course-price{
+            padding-right: 15px;
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+}
+
+@mixin Btn{
+    h2 {
+        background-color: $btn--color;
+        color: $bg--color;
+        width: 251px;
+        line-height: 60px;
+        margin-left: auto;
+        margin-right: 0;
+        text-align: center;
+        }
 }
