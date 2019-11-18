@@ -107,7 +107,6 @@
 // メインscssファイルはwebページの骨組み
 // 外部ファイルscssは共通パーツ(ブログカード)やフォント、レスポンシブ時の変化を記載しておく
 
-@import "responsive";
 @import "style";
 
 *{
@@ -155,7 +154,7 @@ header{
     top: 0px;
     left: 0px;
     z-index: 10;
-} h2 {
+    h2 {
     background-color: $btn--color;
     color: $bg--color;
     width: 251px;
@@ -163,6 +162,7 @@ header{
     margin-left: auto;
     margin-right: 0;
     text-align: center;
+    }
 }
 
 
@@ -227,20 +227,51 @@ header{
 .secttion__two{
     width: 100%;
     /* 初期確認用 */
-    background-color: white;
-    height: 300px;
     border: 2px solid #333333;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 140px;
+        .content{
+            max-width: 550px;
+            width: 100%;
+            .heading{
+                @include Heading;
+                padding-bottom: 48px;
+            }
+            .content__message{
+                @include Message;
+            }
+        }
+    }
 }
 
 /* ======================================================
 セクション③
 ========================================================= */
+
 .secttion__three{
     width: 100%;
     /* 初期確認用 */
-    background-color: white;
-    height: 300px;
     border: 2px solid #333333;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 140px;
+        .content{
+            max-width: 550px;
+            width: 100%;
+            .heading{
+                @include Heading;
+                padding-bottom: 48px;
+            }
+            .content__message{
+                @include Message;
+            }
+        }
+    }
 }
 
 /* ======================================================
@@ -249,10 +280,26 @@ header{
 .secttion__four{
     width: 100%;
     /* 初期確認用 */
-    background-color: white;
-    height: 300px;
     border: 2px solid #333333;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 140px;
+        .content{
+            max-width: 550px;
+            width: 100%;
+            .heading{
+                @include Heading;
+                padding-bottom: 48px;
+            }
+            .content__message{
+                @include Message;
+            }
+        }
+    }
 }
+
 
 
 

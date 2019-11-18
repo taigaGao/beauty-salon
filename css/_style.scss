@@ -1,5 +1,5 @@
-// ②メインカラーの色を変数で管理してください
-// ③@mixinでレスポンシブのmedia queryを継承方式で記述ください
+@import "responsive";
+// 共通のプロパティを管理
 
 // メイン背景色// #FFFFFF
 $bg--color: #FFFFFF;
@@ -20,3 +20,30 @@ $copy--color: #797979;
 // Times
 // ヒラギノ明朝 Pro
 
+
+//セクション分割ライン
+@mixin Heading {
+    h2{
+        font-size: 40px;
+        color: $mfont--color;
+        display: flex;
+        align-items: center;
+        max-width: 560px;
+    }
+    h2:before{
+        content: "";
+        flex-grow: 1;
+        height: 3px;
+        background: $btn--color;
+        display: block;
+        margin-right: 30px;
+    }
+}
+
+@mixin Message {
+    p{
+        font-size: 18px;
+        text-align-last: right;
+        line-height: 44px;
+    }
+}

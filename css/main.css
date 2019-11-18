@@ -42,7 +42,7 @@ header {
   z-index: 10;
 }
 
-h2 {
+header h2 {
   background-color: #C88D95;
   color: #FFFFFF;
   width: 251px;
@@ -111,9 +111,46 @@ h2 {
 .secttion__two {
   width: 100%;
   /* 初期確認用 */
-  background-color: white;
-  height: 300px;
   border: 2px solid #333333;
+}
+
+.secttion__two .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 140px;
+}
+
+.secttion__two .container .content {
+  max-width: 550px;
+  width: 100%;
+}
+
+.secttion__two .container .content .heading {
+  padding-bottom: 48px;
+}
+
+.secttion__two .container .content .heading h2 {
+  font-size: 40px;
+  color: #2B2B2B;
+  display: flex;
+  align-items: center;
+  max-width: 560px;
+}
+
+.secttion__two .container .content .heading h2:before {
+  content: "";
+  flex-grow: 1;
+  height: 3px;
+  background: #C88D95;
+  display: block;
+  margin-right: 30px;
+}
+
+.secttion__two .container .content .content__message p {
+  font-size: 18px;
+  text-align-last: right;
+  line-height: 44px;
 }
 
 /* ======================================================
@@ -122,9 +159,46 @@ h2 {
 .secttion__three {
   width: 100%;
   /* 初期確認用 */
-  background-color: white;
-  height: 300px;
   border: 2px solid #333333;
+}
+
+.secttion__three .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 140px;
+}
+
+.secttion__three .container .content {
+  max-width: 550px;
+  width: 100%;
+}
+
+.secttion__three .container .content .heading {
+  padding-bottom: 48px;
+}
+
+.secttion__three .container .content .heading h2 {
+  font-size: 40px;
+  color: #2B2B2B;
+  display: flex;
+  align-items: center;
+  max-width: 560px;
+}
+
+.secttion__three .container .content .heading h2:before {
+  content: "";
+  flex-grow: 1;
+  height: 3px;
+  background: #C88D95;
+  display: block;
+  margin-right: 30px;
+}
+
+.secttion__three .container .content .content__message p {
+  font-size: 18px;
+  text-align-last: right;
+  line-height: 44px;
 }
 
 /* ======================================================
@@ -133,9 +207,46 @@ h2 {
 .secttion__four {
   width: 100%;
   /* 初期確認用 */
-  background-color: white;
-  height: 300px;
   border: 2px solid #333333;
+}
+
+.secttion__four .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 140px;
+}
+
+.secttion__four .container .content {
+  max-width: 550px;
+  width: 100%;
+}
+
+.secttion__four .container .content .heading {
+  padding-bottom: 48px;
+}
+
+.secttion__four .container .content .heading h2 {
+  font-size: 40px;
+  color: #2B2B2B;
+  display: flex;
+  align-items: center;
+  max-width: 560px;
+}
+
+.secttion__four .container .content .heading h2:before {
+  content: "";
+  flex-grow: 1;
+  height: 3px;
+  background: #C88D95;
+  display: block;
+  margin-right: 30px;
+}
+
+.secttion__four .container .content .content__message p {
+  font-size: 18px;
+  text-align-last: right;
+  line-height: 44px;
 }
 
 /* ======================================================
