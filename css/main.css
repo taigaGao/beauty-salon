@@ -26,6 +26,7 @@ a {
 .flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* ======================================================
@@ -70,6 +71,7 @@ header h2 {
   background-color: white;
   /* ヘッダー一固定調整用 */
   margin-top: 60px;
+  align-items: center;
 }
 
 .gnavi .menu {
@@ -87,6 +89,7 @@ header h2 {
 .gnavi .sns {
   padding: 0px 30px 0 0;
   font-size: 24px;
+  display: flex;
 }
 
 .gnavi .sns i {
@@ -120,11 +123,13 @@ header h2 {
 
 .secttion__two .container .content {
   max-width: 550px;
+  min-width: 400px;
   width: 100%;
 }
 
 .secttion__two .container .content .heading {
   padding-bottom: 48px;
+  width: 100%;
 }
 
 .secttion__two .container .content .heading h2 {
@@ -145,10 +150,24 @@ header h2 {
   margin-right: 30px;
 }
 
+.secttion__two .container .content .content__message {
+  width: 100%;
+}
+
 .secttion__two .container .content .content__message p {
   font-size: 18px;
   line-height: 44px;
   text-align-last: right;
+}
+
+.secttion__two .container .content-image {
+  width: 570px;
+  height: 380px;
+  min-width: 500px;
+}
+
+.secttion__two .container .content-image img {
+  width: 100%;
 }
 
 /* ======================================================
@@ -169,11 +188,13 @@ header h2 {
 
 .secttion__three .container .content {
   max-width: 550px;
+  min-width: 500px;
   width: 100%;
 }
 
 .secttion__three .container .content .heading {
   padding-bottom: 48px;
+  width: 100%;
 }
 
 .secttion__three .container .content .heading h2 {
@@ -194,6 +215,10 @@ header h2 {
   margin-left: 30px;
 }
 
+.secttion__three .container .content .content__message {
+  width: 100%;
+}
+
 .secttion__three .container .content .content__message p {
   font-size: 18px;
   line-height: 44px;
@@ -203,6 +228,7 @@ header h2 {
 .secttion__three .container .content-image {
   width: 570px;
   height: 380px;
+  min-width: 500px;
 }
 
 .secttion__three .container img {
@@ -226,6 +252,7 @@ header h2 {
 
 .secttion__four .container .content {
   max-width: 550px;
+  min-width: 500px;
   width: 100%;
 }
 
@@ -292,14 +319,23 @@ header h2 {
 
 .secttion__four .container .content-image {
   padding-bottom: 37px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 570px;
+  min-width: 600px;
 }
 
 .secttion__four .container .content-image .image-one {
   padding-right: 34.5px;
+  padding-top: 90px;
+  width: 100%;
+  min-width: 70%;
 }
 
 .secttion__four .container .content-image .image-two {
   padding-bottom: 10px;
+  width: 100%;
+  min-width: 67%;
 }
 
 .secttion__btn {

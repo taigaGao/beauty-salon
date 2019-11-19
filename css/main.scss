@@ -143,6 +143,7 @@ a {
 .flex{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 /* ======================================================
@@ -183,6 +184,7 @@ header{
     background-color: white;
     /* ヘッダー一固定調整用 */
     margin-top: 60px;
+    align-items: center;
 } .gnavi {
     .menu{
         background-color: $gnavi--color;
@@ -196,6 +198,7 @@ header{
     } .sns {
         padding :0px 30px 0 0;
         font-size: 24px;
+        display: flex;
         i{
             padding-right: 30px;
             padding-bottom: 30px;
@@ -224,13 +227,25 @@ header{
         padding-top: 140px;
         .content{
             max-width: 550px;
+            min-width: 400px;
             width: 100%;
             .heading{
                 @include Heading('before');
                 padding-bottom: 48px;
+                width: 100%;
             }
             .content__message{
                 @include Message('before');
+                width: 100%;
+            }
+        }
+        .content-image {
+            width: 570px;
+            height: 380px;
+            min-width: 500px;
+            // text-align:center
+            img{
+                width: 100%;
             }
         }
     }
@@ -252,20 +267,25 @@ header{
         padding-top: 140px;
         .content{
             max-width: 550px;
+            min-width: 500px;
             width: 100%;
             .heading{
                 @include Heading('after');
                 padding-bottom: 48px;
+                width: 100%;
             }
             .content__message{
                 @include Message('after');
+                width: 100%;
             }
         }
         .content-image {
             width: 570px;
             height: 380px;
+            min-width: 500px;
         } img {
             width: 100%;
+            
         }
     }
 }
@@ -284,6 +304,7 @@ header{
         padding-top: 140px;
         .content{
             max-width: 550px;
+            min-width: 500px;
             width: 100%;
             .heading{
                 @include Heading('before');
@@ -301,11 +322,21 @@ header{
         }
         .content-image {
             padding-bottom: 37px;
+            // min-width: 60%;
+            display: flex;
+            flex-wrap: nowrap;
+            width: 570px;
+            min-width: 600px;
             .image-one{
                 padding-right: 34.5px;
+                padding-top: 90px;
+                width: 100%;
+                min-width: 70%;
             }
             .image-two{
                 padding-bottom: 10px;
+                width: 100%;
+                min-width: 67%;
             }
         }
     }
