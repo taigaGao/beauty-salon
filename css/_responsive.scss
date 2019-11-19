@@ -1,25 +1,79 @@
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
+// $sm: 576px;
+// $md: 768px;
+// $lg: 992px;
+// $xl: 1200px;
 
-@mixin sm {
-        @media (min-width: ($sm)) {
-        @content;
+// @mixin sm {
+//         @media (min-width: ($sm)) {
+//         @content;
+//         }
+//     }
+// @mixin md {
+//         @media (min-width: ($md)) {
+//         @content;
+//         }
+//     }
+// @mixin lg {
+//         @media (min-width: ($lg)) {
+//         @content;
+//         }
+//     }
+// @mixin xl {
+//         @media (min-width: ($xl)) {
+//         @content;
+//     }
+// }
+
+$lg: 1080px;
+$md: 768px;
+$sm: 576px;
+
+@mixin lg($lg) {
+    @media all and (max-width: $lg) {
+        header{
+            display: flex;
+            .nav-btn{
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                background-color: $gnavi--color;
+                i {
+                    line-height: 60px;
+                    font-size: 40px;
+                    padding-left: 10px;
+                    color: $btn--color;
+                }
+            }
         }
-    }
-@mixin md {
-        @media (min-width: ($md)) {
-        @content;
+        .secttion__one{
+            .gnavi{
+                display: none;
+            }
+            .mv{
+                // position: relative;
+                .mv-image{
+                    // z-index: 9;
+                }
+                .logo{
+                    // display: block;
+                    // width: 400px;
+                    // position: absolute;
+                    // top: 960px;
+                    // left: 100px;
+                    // z-index: 10;
+                }
+            }
         }
-    }
-@mixin lg {
-        @media (min-width: ($lg)) {
-        @content;
+        .secttion__two{
         }
-    }
-@mixin xl {
-        @media (min-width: ($xl)) {
-        @content;
+        .secttion__three{
+        }
+        .secttion__four{
+            
+        }
+        .secttion__btn{
+        }
+        .gloabal-footer{
+        }
     }
 }

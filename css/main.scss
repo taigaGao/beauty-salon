@@ -110,7 +110,9 @@
 @import "style";
 @import "responsive";
 
-*{
+@include lg($lg);
+
+* {
     box-sizing: border-box;
 }
 
@@ -326,7 +328,7 @@ header{
             display: flex;
             flex-wrap: nowrap;
             width: 570px;
-            min-width: 600px;
+            min-width: 500px;
             .image-one{
                 padding-right: 34.5px;
                 padding-top: 90px;

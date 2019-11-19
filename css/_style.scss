@@ -58,7 +58,7 @@ $copy--color: #797979;
         @if $before == before {
             text-align-last: right;
         } @else {
-            ext-align-last: left;
+            text-align-last: left;
         }
     }
 }
@@ -93,7 +93,7 @@ $copy--color: #797979;
             @if $position == top {
                 margin-left: auto;
                 margin-right: 0;
-            } @elseif $position == none {
+            } @else if $position == none {
                 margin: 0 auto;
                 display: none;
             } 
