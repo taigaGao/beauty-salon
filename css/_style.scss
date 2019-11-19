@@ -95,7 +95,6 @@ $copy--color: #797979;
                 margin-right: 0;
             } @else if $position == none {
                 margin: 0 auto;
-                display: none;
             } 
         }
 }

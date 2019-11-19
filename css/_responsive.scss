@@ -25,7 +25,7 @@
 // }
 
 $lg: 1080px;
-$md: 768px;
+$md: 873px;
 $sm: 576px;
 
 @mixin lg($lg) {
@@ -33,7 +33,6 @@ $sm: 576px;
         .pcbr{
             display: none;
         }
-
         header{
             display: flex;
             .drawer{
@@ -96,7 +95,6 @@ $sm: 576px;
         }
         .secttion__four{
             .container {
-
                 .content {
                     .content__message{
                         p {
@@ -106,6 +104,96 @@ $sm: 576px;
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@mixin md($md) {
+    @media all and (max-width: $md) {
+        .secttion__two{
+            box-sizing: border-box;
+            .container{
+                flex-wrap: wrap;
+                box-sizing: border-box;
+                .content{
+                    max-width: 100%;
+                    width: 100%;
+                    margin-bottom: 40px;
+                    .heading {
+                        h2{
+                            width: 100%;
+                            max-width: 100%;
+                        }
+                    }
+                }
+                .content-image{
+                    max-width: 100%;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .secttion__three{
+            .container{
+                flex-wrap: wrap;
+                .content{
+                    max-width: 100%;
+                    width: 100%;
+                    margin-bottom: 40px;
+                    .heading {
+                        h2{
+                            width: 100%;
+                            max-width: 100%;
+                        }
+                    }
+                }
+                .content-image{
+                    max-width: 100%;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .secttion__four{
+            .container{
+                flex-wrap: wrap;
+                .content{
+                    max-width: 100%;
+                    width: 100%;
+                    margin-bottom: 40px;
+                    .heading {
+                        h2{
+                            width: 100%;
+                            max-width: 100%;
+                        }
+                    }
+                    .Reservation{
+                        display: block;
+                    }
+                }
+                .content-image{
+                    justify-content: space-evenly;
+                    max-width: 100%;
+                    width: 100%;
+                    height: 100%;
+                    .image-box{
+                        align-items: center;
+                        margin: 0 atuo;
+                    }
+                }
+            }
+        }
+        .secttion__btn{
+            display: none;
+        }
+        footer{
+            .footer-logo{
+                padding-right: 0px;
+            }
+            .copy{
+                padding-right: 0px;
+                text-align: center;
             }
         }
     }

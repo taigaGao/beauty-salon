@@ -183,6 +183,7 @@ header .drawer {
 
 header .drawer #drawer-content {
   background-color: #F4F4F4;
+  height: 370px;
 }
 
 header .drawer #drawer-icon span::before {
@@ -195,6 +196,29 @@ header .drawer #drawer-icon span {
 
 header .drawer #drawer-icon span::after {
   background-color: #C88D95;
+}
+
+header .drawer #drawer-content .text-link {
+  text-align: center;
+  width: 100%;
+}
+
+header .drawer #drawer-content .text-link a {
+  display: block;
+  width: 100%;
+  color: #2B2B2B;
+  padding-top: 40px;
+  font-size: 24px;
+}
+
+header .drawer #drawer-content .sns-icon {
+  color: #2B2B2B;
+  padding-top: 40px;
+  font-size: 40px;
+}
+
+header .drawer #drawer-content i {
+  padding: 0 10px;
 }
 
 /* ======================================================
@@ -463,7 +487,6 @@ header .drawer #drawer-icon span::after {
   line-height: 60px;
   text-align: center;
   margin: 0 auto;
-  display: none;
 }
 
 .secttion__four .container .content-image {
@@ -610,5 +633,81 @@ footer .copy {
     line-height: 38px;
     font-size: 18px;
     color: green;
+  }
+}
+
+@media all and (max-width: 873px) {
+  .secttion__two {
+    box-sizing: border-box;
+  }
+  .secttion__two .container {
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  .secttion__two .container .content {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .secttion__two .container .content .heading h2 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .secttion__two .container .content-image {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  .secttion__three .container {
+    flex-wrap: wrap;
+  }
+  .secttion__three .container .content {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .secttion__three .container .content .heading h2 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .secttion__three .container .content-image {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  .secttion__four .container {
+    flex-wrap: wrap;
+  }
+  .secttion__four .container .content {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .secttion__four .container .content .heading h2 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .secttion__four .container .content .Reservation {
+    display: block;
+  }
+  .secttion__four .container .content-image {
+    justify-content: space-evenly;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  .secttion__four .container .content-image .image-box {
+    align-items: center;
+    margin: 0 atuo;
+  }
+  .secttion__btn {
+    display: none;
+  }
+  footer .footer-logo {
+    padding-right: 0px;
+  }
+  footer .copy {
+    padding-right: 0px;
+    text-align: center;
   }
 }
