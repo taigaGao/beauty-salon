@@ -33,7 +33,7 @@ $sm: 576px;
         header{
             display: flex;
             .nav-btn{
-                display: inline-block;
+                // // display: block;
                 width: 60px;
                 height: 60px;
                 background-color: $gnavi--color;
@@ -46,21 +46,28 @@ $sm: 576px;
             }
         }
         .secttion__one{
-            .gnavi{
+            .container {
                 display: none;
             }
-            .mv{
-                // position: relative;
-                .mv-image{
-                    // z-index: 9;
+            .mv-responsive{
+                width: 100%;
+                position: relative;
+                margin: 0 auto;
+                z-index: 8;
+                .mv-image-responsive{
+                    z-index: 9;
+                    width: 100%;
+                }
+                img {
+                    display: block;
                 }
                 .logo{
-                    // display: block;
-                    // width: 400px;
-                    // position: absolute;
-                    // top: 960px;
-                    // left: 100px;
-                    // z-index: 10;
+                    display: block;
+                    width: 125px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    z-index: 10;
                 }
             }
         }

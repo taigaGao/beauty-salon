@@ -108,9 +108,7 @@
 // 外部ファイルscssは共通パーツ(ブログカード)やフォント、レスポンシブ時の変化を記載しておく
 
 @import "style";
-@import "responsive";
 
-@include lg($lg);
 
 * {
     box-sizing: border-box;
@@ -160,6 +158,9 @@ header{
     left: 0px;
     z-index: 10;
     @include Btn('top');
+    .nav-btn{
+        display: none;
+    }
 }
 
 
@@ -187,32 +188,35 @@ header{
     /* ヘッダー一固定調整用 */
     margin-top: 60px;
     align-items: center;
-} .gnavi {
-    .menu{
-        background-color: $gnavi--color;
-        padding :60px 10px 70px 60px;
-        margin-left: -60px;
-        ul li{
-            line-height: 24px;
-            font-size: 20px;
-            padding-bottom: 40px;
+    } .gnavi {
+        .menu{
+            background-color: $gnavi--color;
+            padding :60px 10px 70px 60px;
+            margin-left: -60px;
+            ul li{
+                line-height: 24px;
+                font-size: 20px;
+                padding-bottom: 40px;
+            }
+        } .sns {
+            padding :0px 30px 0 0;
+            font-size: 24px;
+            display: flex;
+            i{
+                padding-right: 30px;
+                padding-bottom: 30px;
+            }
         }
-    } .sns {
-        padding :0px 30px 0 0;
-        font-size: 24px;
-        display: flex;
-        i{
-            padding-right: 30px;
-            padding-bottom: 30px;
+    } .mv {
+        margin-left:auto;
+        margin-right: 0;
+        img {
+            width: 100%;
         }
+    } .mv-image-responsive{
+        display: none;
     }
-} .mv {
-    margin-left:auto;
-    margin-right: 0;
-    img {
-        width: 100%;
-    }
-}
+
 
 
 /* ======================================================
@@ -244,7 +248,7 @@ header{
         .content-image {
             width: 570px;
             height: 380px;
-            min-width: 500px;
+            min-width: 400px;
             // text-align:center
             img{
                 width: 100%;
@@ -269,7 +273,7 @@ header{
         padding-top: 140px;
         .content{
             max-width: 550px;
-            min-width: 500px;
+            min-width: 400px;
             width: 100%;
             .heading{
                 @include Heading('after');
@@ -284,10 +288,9 @@ header{
         .content-image {
             width: 570px;
             height: 380px;
-            min-width: 500px;
+            min-width: 400px;
         } img {
             width: 100%;
-            
         }
     }
 }
@@ -306,7 +309,7 @@ header{
         padding-top: 140px;
         .content{
             max-width: 550px;
-            min-width: 500px;
+            min-width: 400px;
             width: 100%;
             .heading{
                 @include Heading('before');
@@ -328,17 +331,17 @@ header{
             display: flex;
             flex-wrap: nowrap;
             width: 570px;
-            min-width: 500px;
+            min-width: 400px;
             .image-one{
                 padding-right: 34.5px;
                 padding-top: 90px;
                 width: 100%;
-                min-width: 70%;
+                min-width: 30%;
             }
             .image-two{
                 padding-bottom: 10px;
                 width: 100%;
-                min-width: 67%;
+                min-width: 30%;
             }
         }
     }
@@ -409,3 +412,6 @@ footer{
 }
 
 
+@import "responsive";
+
+@include lg($lg);

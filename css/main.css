@@ -1,25 +1,4 @@
 @charset "UTF-8";
-@media all and (max-width: 1080px) {
-  header {
-    display: flex;
-  }
-  header .nav-btn {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    background-color: #F4F4F4;
-  }
-  header .nav-btn i {
-    line-height: 60px;
-    font-size: 40px;
-    padding-left: 10px;
-    color: #C88D95;
-  }
-  .secttion__one .gnavi {
-    display: none;
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -71,6 +50,10 @@ header h2 {
   text-align: center;
   margin-left: auto;
   margin-right: 0;
+}
+
+header .nav-btn {
+  display: none;
 }
 
 /* ======================================================
@@ -125,6 +108,10 @@ header h2 {
 
 .mv img {
   width: 100%;
+}
+
+.mv-image-responsive {
+  display: none;
 }
 
 /* ======================================================
@@ -184,7 +171,7 @@ header h2 {
 .secttion__two .container .content-image {
   width: 570px;
   height: 380px;
-  min-width: 500px;
+  min-width: 400px;
 }
 
 .secttion__two .container .content-image img {
@@ -209,7 +196,7 @@ header h2 {
 
 .secttion__three .container .content {
   max-width: 550px;
-  min-width: 500px;
+  min-width: 400px;
   width: 100%;
 }
 
@@ -249,7 +236,7 @@ header h2 {
 .secttion__three .container .content-image {
   width: 570px;
   height: 380px;
-  min-width: 500px;
+  min-width: 400px;
 }
 
 .secttion__three .container img {
@@ -273,7 +260,7 @@ header h2 {
 
 .secttion__four .container .content {
   max-width: 550px;
-  min-width: 500px;
+  min-width: 400px;
   width: 100%;
 }
 
@@ -343,20 +330,20 @@ header h2 {
   display: flex;
   flex-wrap: nowrap;
   width: 570px;
-  min-width: 500px;
+  min-width: 400px;
 }
 
 .secttion__four .container .content-image .image-one {
   padding-right: 34.5px;
   padding-top: 90px;
   width: 100%;
-  min-width: 70%;
+  min-width: 30%;
 }
 
 .secttion__four .container .content-image .image-two {
   padding-bottom: 10px;
   width: 100%;
-  min-width: 67%;
+  min-width: 30%;
 }
 
 .secttion__btn {
@@ -426,4 +413,45 @@ footer .footer-logo {
 footer .copy {
   text-align: right;
   padding-right: 100px;
+}
+
+@media all and (max-width: 1080px) {
+  header {
+    display: flex;
+  }
+  header .nav-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #F4F4F4;
+  }
+  header .nav-btn i {
+    line-height: 60px;
+    font-size: 40px;
+    padding-left: 10px;
+    color: #C88D95;
+  }
+  .secttion__one .container {
+    display: none;
+  }
+  .secttion__one .mv-responsive {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    z-index: 8;
+  }
+  .secttion__one .mv-responsive .mv-image-responsive {
+    z-index: 9;
+    width: 100%;
+  }
+  .secttion__one .mv-responsive img {
+    display: block;
+  }
+  .secttion__one .mv-responsive .logo {
+    display: block;
+    width: 125px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
 }
