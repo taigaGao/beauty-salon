@@ -55,6 +55,9 @@ $copy--color: #797979;
     p{
         font-size: 18px;
         line-height: 44px;
+        font-family: "Times";
+        font-weight: Bold;
+        color: $mfont--color;
         @if $before == before {
             text-align-last: right;
         } @else {
@@ -84,7 +87,7 @@ $copy--color: #797979;
 }
 
 @mixin Btn($position){
-    h2 {
+    .btn {
         background-color: $btn--color;
         color: $bg--color;
         width: 251px;

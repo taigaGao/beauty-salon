@@ -158,7 +158,12 @@ header{
     top: 0px;
     left: 0px;
     z-index: 10;
-    @include Btn('top');
+    .Reservation{
+        @include Btn('top');
+        a {
+            display: block;
+        }
+    }
     .nav-btn{
         display: none;
     }
@@ -232,7 +237,7 @@ header{
     background-color: white;
     /* ヘッダー一固定調整用 */
     margin-top: 60px;
-    align-items: center;
+    // align-items: center;
     } .gnavi {
         .menu{
             background-color: $gnavi--color;
@@ -258,7 +263,7 @@ header{
         img {
             width: 100%;
         }
-    } .mv-image-responsive{
+    } .mv-responsive{
         display: none;
     }
 
@@ -396,19 +401,31 @@ header{
         display: flex;
     }
     @include Btn('under');
-    h2{
+    a{
         margin-right: 0;
-        margin-left: 27%;
+        margin-left: 120%;
         max-width: 224px;
         width: 100%;
         height: 50px;
-    }
-    hr{
-        height: 3px;
         display: block;
-        background-color: $btn--color;
-        width: 100%;
-        margin:auto 0;
+        position: relative;
+            z-index: 10;
+    }
+    .line{
+        text-align: right;
+        margin: 0 0 0 auto;
+        z-index: 9;
+        width: 54vw;
+        hr{
+            height: 3px;
+            // display: block;
+            background-color: $btn--color;
+            width: 100%;
+            position: relative;
+            z-index: 0;
+            margin: 25px 0;
+            
+        }
     }
 }
 
@@ -443,6 +460,9 @@ footer{
             display: flex;
             justify-content: space-between;
             padding-bottom: 30px;
+            a{
+                color: $mfont--color;
+            }
         }
     }
     .footer-logo{
@@ -459,3 +479,4 @@ footer{
 
 @include lg($lg);
 @include md($md);
+@include sm($sm);

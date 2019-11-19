@@ -35,8 +35,12 @@ $sm: 576px;
         }
         header{
             display: flex;
+            justify-content: flex-end;
+            // text-align-last: right;
+            
             .drawer{
                 display: block;
+                text-align: right
             }
         }
         .secttion__one{
@@ -44,6 +48,7 @@ $sm: 576px;
                 display: none;
             }
             .mv-responsive{
+                display: block;
                 width: 100%;
                 position: relative;
                 margin: 0 auto;
@@ -73,7 +78,9 @@ $sm: 576px;
                         p {
                             line-height: 38px;
                             font-size: 18px;
-                            color: purple;
+                            font-family: "ヒラギノ明朝 Pro";
+                            font-weight: 600;
+                            color: $mfont--color;
                         }
                     }
                 }
@@ -87,7 +94,9 @@ $sm: 576px;
                         p {
                             line-height: 38px;
                             font-size: 18px;
-                            color: green;
+                            font-family: "ヒラギノ明朝 Pro";
+                            font-weight: 600;
+                            color: $mfont--color;
                         }
                     }
                 }
@@ -170,6 +179,10 @@ $sm: 576px;
                     }
                     .Reservation{
                         display: block;
+                        text-align: center;
+                        a {
+                            padding: 20px 70px;
+                        }
                     }
                 }
                 .content-image{
@@ -194,6 +207,134 @@ $sm: 576px;
             .copy{
                 padding-right: 0px;
                 text-align: center;
+            }
+        }
+    }
+}
+
+
+@mixin sm($sm) {
+    @media all and (max-width: $sm) {
+        .container{
+            width: 92%;
+        }
+        header{
+            .Reservation{
+                width: 157px;
+                .btn{
+                    width: 157px;
+                }
+            }
+            .drawer{
+                #drawer-content{
+                    width: 217px;
+                }
+            }
+        }
+        .secttion__two{
+            .container{
+                padding-top: 70px;
+                .content{
+                    min-width: 100px;
+                    .content__message{
+                        p{
+                            font-size: 16px;
+                        }
+                    }
+                    .heading{
+                        padding-bottom: 24px;
+                    }
+                }
+                .content__message{
+                    font-size: 16px;
+                    letter-spacing: 0px;
+                }
+                .content-image{
+                    min-width: 100px;
+                }
+            }
+        }
+        .secttion__three{
+            .container{
+                padding-top: 70px;
+                .content{
+                    min-width: 100px;
+                    .content__message{
+                        p{
+                            font-size: 16px;
+                        }
+                    }
+                    .heading{
+                        padding-bottom: 24px;
+                    }
+                }
+                .content-image{
+                    min-width: 100px;
+                }
+            }
+        }
+        .secttion__four{
+            .container{
+                padding-top: 70px;
+                .content{
+                    min-width: 100px;
+                    .heading{
+                        padding-bottom: 24px;
+                    }
+                    .content__menu{
+                        width: 100%;
+                        .course{
+                            padding: 0 10px;
+                            padding-bottom: 20px;
+                        }
+                    }
+                    .Reservation{
+                        margin: 0 auto;
+                        padding: 20px 0;
+                        text-align: center;
+                        a {
+                            padding: 20px 20px;
+                        }
+                    }
+                }
+                .content-image{
+                    min-width: 100px;
+                }
+                min-width: 100px;
+                .image-box{
+                    width: 44%;
+                    min-width: 0px;
+                    .image-one{
+                        width: 100%;
+                        min-width: 0px;
+                        padding-right: 10px;
+                    }
+                    .image-two{
+                        width: 100%;
+                        min-width: 0px;
+                    }
+                }
+            }
+        }
+        footer{
+            height: 100%;
+            .gloabal-footer{
+                display: flex;
+                flex-wrap: wrap-reverse;
+                .fnavi{
+                    margin: 0 auto;
+                    width: 66%;
+                    p{
+                        font-size: 16px;
+                        letter-spacing: 0px;
+                    }
+                }
+                .footer-logo{
+                    width: 120px;
+                    height: 150px;
+                    margin: 0 auto;
+                    padding-bottom: 30px;
+                }
             }
         }
     }

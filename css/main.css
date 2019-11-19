@@ -158,7 +158,7 @@ header .drawer #drawer-checkbox:checked ~ #drawer-close {
   opacity: 0.3;
 }
 
-header h2 {
+header .Reservation .btn {
   background-color: #C88D95;
   color: #FFFFFF;
   width: 251px;
@@ -166,6 +166,10 @@ header h2 {
   text-align: center;
   margin-left: auto;
   margin-right: 0;
+}
+
+header .Reservation a {
+  display: block;
 }
 
 header .nav-btn {
@@ -240,7 +244,6 @@ header .drawer #drawer-content i {
   background-color: white;
   /* ヘッダー一固定調整用 */
   margin-top: 60px;
-  align-items: center;
 }
 
 .gnavi .menu {
@@ -275,7 +278,7 @@ header .drawer #drawer-content i {
   width: 100%;
 }
 
-.mv-image-responsive {
+.mv-responsive {
   display: none;
 }
 
@@ -330,6 +333,9 @@ header .drawer #drawer-content i {
 .secttion__two .container .content .content__message p {
   font-size: 18px;
   line-height: 44px;
+  font-family: "Times";
+  font-weight: Bold;
+  color: #2B2B2B;
   text-align-last: right;
 }
 
@@ -395,6 +401,9 @@ header .drawer #drawer-content i {
 .secttion__three .container .content .content__message p {
   font-size: 18px;
   line-height: 44px;
+  font-family: "Times";
+  font-weight: Bold;
+  color: #2B2B2B;
   text-align-last: left;
 }
 
@@ -480,7 +489,7 @@ header .drawer #drawer-content i {
   display: none;
 }
 
-.secttion__four .container .content .Reservation h2 {
+.secttion__four .container .content .Reservation .btn {
   background-color: #C88D95;
   color: #FFFFFF;
   width: 251px;
@@ -518,7 +527,7 @@ header .drawer #drawer-content i {
   display: flex;
 }
 
-.secttion__btn h2 {
+.secttion__btn .btn {
   background-color: #C88D95;
   color: #FFFFFF;
   width: 251px;
@@ -526,20 +535,31 @@ header .drawer #drawer-content i {
   text-align: center;
 }
 
-.secttion__btn h2 {
+.secttion__btn a {
   margin-right: 0;
-  margin-left: 27%;
+  margin-left: 120%;
   max-width: 224px;
   width: 100%;
   height: 50px;
+  display: block;
+  position: relative;
+  z-index: 10;
 }
 
-.secttion__btn hr {
+.secttion__btn .line {
+  text-align: right;
+  margin: 0 0 0 auto;
+  z-index: 9;
+  width: 54vw;
+}
+
+.secttion__btn .line hr {
   height: 3px;
-  display: block;
   background-color: #C88D95;
   width: 100%;
-  margin: auto 0;
+  position: relative;
+  z-index: 0;
+  margin: 25px 0;
 }
 
 /* ======================================================
@@ -570,6 +590,10 @@ footer .fnavi .fnavi-column {
   padding-bottom: 30px;
 }
 
+footer .fnavi .fnavi-column a {
+  color: #2B2B2B;
+}
+
 footer .footer-logo {
   padding-right: 100px;
 }
@@ -585,14 +609,17 @@ footer .copy {
   }
   header {
     display: flex;
+    justify-content: flex-end;
   }
   header .drawer {
     display: block;
+    text-align: right;
   }
   .secttion__one .container {
     display: none;
   }
   .secttion__one .mv-responsive {
+    display: block;
     width: 100%;
     position: relative;
     margin: 0 auto;
@@ -619,7 +646,9 @@ footer .copy {
   .secttion__two .container .content .content__message p {
     line-height: 38px;
     font-size: 18px;
-    color: purple;
+    font-family: "ヒラギノ明朝 Pro";
+    font-weight: 600;
+    color: #2B2B2B;
   }
   .secttion__three .container {
     align-items: start;
@@ -627,7 +656,9 @@ footer .copy {
   .secttion__three .container .content .content__message p {
     line-height: 38px;
     font-size: 18px;
-    color: green;
+    font-family: "ヒラギノ明朝 Pro";
+    font-weight: 600;
+    color: #2B2B2B;
   }
   .secttion__four .container .content .content__message p {
     line-height: 38px;
@@ -689,6 +720,10 @@ footer .copy {
   }
   .secttion__four .container .content .Reservation {
     display: block;
+    text-align: center;
+  }
+  .secttion__four .container .content .Reservation a {
+    padding: 20px 70px;
   }
   .secttion__four .container .content-image {
     justify-content: space-evenly;
@@ -709,5 +744,116 @@ footer .copy {
   footer .copy {
     padding-right: 0px;
     text-align: center;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .container {
+    width: 92%;
+  }
+  header .Reservation {
+    width: 157px;
+  }
+  header .Reservation .btn {
+    width: 157px;
+  }
+  header .drawer #drawer-content {
+    width: 217px;
+  }
+  .secttion__two .container {
+    padding-top: 70px;
+  }
+  .secttion__two .container .content {
+    min-width: 100px;
+  }
+  .secttion__two .container .content .content__message p {
+    font-size: 16px;
+  }
+  .secttion__two .container .content .heading {
+    padding-bottom: 24px;
+  }
+  .secttion__two .container .content__message {
+    font-size: 16px;
+    letter-spacing: 0px;
+  }
+  .secttion__two .container .content-image {
+    min-width: 100px;
+  }
+  .secttion__three .container {
+    padding-top: 70px;
+  }
+  .secttion__three .container .content {
+    min-width: 100px;
+  }
+  .secttion__three .container .content .content__message p {
+    font-size: 16px;
+  }
+  .secttion__three .container .content .heading {
+    padding-bottom: 24px;
+  }
+  .secttion__three .container .content-image {
+    min-width: 100px;
+  }
+  .secttion__four .container {
+    padding-top: 70px;
+    min-width: 100px;
+  }
+  .secttion__four .container .content {
+    min-width: 100px;
+  }
+  .secttion__four .container .content .heading {
+    padding-bottom: 24px;
+  }
+  .secttion__four .container .content .content__menu {
+    width: 100%;
+  }
+  .secttion__four .container .content .content__menu .course {
+    padding: 0 10px;
+    padding-bottom: 20px;
+  }
+  .secttion__four .container .content .Reservation {
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .secttion__four .container .content .Reservation a {
+    padding: 20px 20px;
+  }
+  .secttion__four .container .content-image {
+    min-width: 100px;
+  }
+  .secttion__four .container .image-box {
+    width: 44%;
+    min-width: 0px;
+  }
+  .secttion__four .container .image-box .image-one {
+    width: 100%;
+    min-width: 0px;
+    padding-right: 10px;
+  }
+  .secttion__four .container .image-box .image-two {
+    width: 100%;
+    min-width: 0px;
+  }
+  footer {
+    height: 100%;
+  }
+  footer .gloabal-footer {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  footer .gloabal-footer .fnavi {
+    margin: 0 auto;
+    width: 66%;
+  }
+  footer .gloabal-footer .fnavi p {
+    font-size: 16px;
+    letter-spacing: 0px;
+  }
+  footer .gloabal-footer .footer-logo {
+    width: 120px;
+    height: 150px;
+    margin: 0 auto;
+    padding-bottom: 30px;
   }
 }
