@@ -30,18 +30,28 @@ $sm: 576px;
 
 @mixin lg($lg) {
     @media all and (max-width: $lg) {
+        .pcbr{
+            display: none;
+        }
+
         header{
             display: flex;
             .nav-btn{
-                // // display: block;
+                display: block;
                 width: 60px;
                 height: 60px;
                 background-color: $gnavi--color;
+                cursor: pointer;
                 i {
                     line-height: 60px;
                     font-size: 40px;
                     padding-left: 10px;
                     color: $btn--color;
+                }
+                &:active{ //ハンバーガーメニュー実装箇所
+                    
+                }.snav-bar-menu{
+                    display: block;
                 }
             }
         }
@@ -72,11 +82,46 @@ $sm: 576px;
             }
         }
         .secttion__two{
+            .container {
+                align-items: start;
+                .content {
+                    .content__message{
+                        p {
+                            line-height: 38px;
+                            font-size: 18px;
+                            color: purple;
+                        }
+                    }
+                }
+            }
         }
         .secttion__three{
+            .container {
+                align-items: start;
+                .content {
+                    .content__message{
+                        p {
+                            line-height: 38px;
+                            font-size: 18px;
+                            color: green;
+                        }
+                    }
+                }
+            }
         }
         .secttion__four{
-            
+            .container {
+
+                .content {
+                    .content__message{
+                        p {
+                            line-height: 38px;
+                            font-size: 18px;
+                            color: green;
+                        }
+                    }
+                }
+            }
         }
         .secttion__btn{
         }

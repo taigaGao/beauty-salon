@@ -56,6 +56,10 @@ header .nav-btn {
   display: none;
 }
 
+header .snav-bar-menu {
+  display: none;
+}
+
 /* ======================================================
 メイン
 ========================================================= */
@@ -416,19 +420,27 @@ footer .copy {
 }
 
 @media all and (max-width: 1080px) {
+  .pcbr {
+    display: none;
+  }
   header {
     display: flex;
   }
   header .nav-btn {
+    display: block;
     width: 60px;
     height: 60px;
     background-color: #F4F4F4;
+    cursor: pointer;
   }
   header .nav-btn i {
     line-height: 60px;
     font-size: 40px;
     padding-left: 10px;
     color: #C88D95;
+  }
+  header .nav-btn .snav-bar-menu {
+    display: block;
   }
   .secttion__one .container {
     display: none;
@@ -453,5 +465,26 @@ footer .copy {
     bottom: 0;
     right: 0;
     z-index: 10;
+  }
+  .secttion__two .container {
+    align-items: start;
+  }
+  .secttion__two .container .content .content__message p {
+    line-height: 38px;
+    font-size: 18px;
+    color: purple;
+  }
+  .secttion__three .container {
+    align-items: start;
+  }
+  .secttion__three .container .content .content__message p {
+    line-height: 38px;
+    font-size: 18px;
+    color: green;
+  }
+  .secttion__four .container .content .content__message p {
+    line-height: 38px;
+    font-size: 18px;
+    color: green;
   }
 }
