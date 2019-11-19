@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: "Times" "ヒラギノ明朝 Pro" "ヒラギノ明朝 ProN" "sans-serif";
+  font-family: "Times", "ヒラギノ明朝 Pro", "ヒラギノ明朝 ProN", "sans-serif";
   background-color: #FFFFFF;
 }
 
@@ -42,6 +42,122 @@ header {
   z-index: 10;
 }
 
+header .drawer #drawer-checkbox {
+  display: none;
+}
+
+header .drawer #drawer-icon {
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  position: relative;
+  width: 50px;
+}
+
+header .drawer #drawer-icon span {
+  background: #333;
+  border-radius: 4px;
+  display: block;
+  height: 16%;
+  left: 50%;
+  margin: -8% 0 0 -42%;
+  position: absolute;
+  top: 50%;
+  transition: all 0.3s ease-in-out;
+  width: 84%;
+}
+
+header .drawer #drawer-icon span::before,
+header .drawer #drawer-icon span::after {
+  -webkit-transform: rotate(0);
+  background: #333;
+  border-radius: 4px;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 50%;
+  margin: -8% 0 0 -50%;
+  position: absolute;
+  top: 50%;
+  transform: rotate(0);
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+header .drawer #drawer-icon span::before {
+  margin-top: -38%;
+}
+
+header .drawer #drawer-icon span::after {
+  margin-top: 19%;
+}
+
+header .drawer #drawer-checkbox:checked ~ #drawer-icon span {
+  background: rgba(51, 51, 51, 0);
+}
+
+header .drawer #drawer-checkbox:checked ~ #drawer-icon span::before,
+header .drawer #drawer-checkbox:checked ~ #drawer-icon span::after {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 50%;
+  margin: -8% 0 0 -42%;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+header .drawer #drawer-checkbox:checked ~ #drawer-icon span::before {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+header .drawer #drawer-checkbox:checked ~ #drawer-icon span::after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+header .drawer #drawer-content {
+  overflow: auto;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  z-index: 40;
+  width: 301px;
+  max-width: 90%;
+  height: 400px;
+  background: #F4F4F4;
+  transition: all 0.3s ease-in-out 0s;
+  transform: translateX(301px);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header .drawer #drawer-checkbox:checked ~ #drawer-content {
+  transform: translateX(0);
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.16);
+}
+
+header .drawer #drawer-close {
+  display: none;
+  position: fixed;
+  z-index: 39;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+header .drawer #drawer-checkbox:checked ~ #drawer-close {
+  display: block;
+  opacity: 0.3;
+}
+
 header h2 {
   background-color: #C88D95;
   color: #FFFFFF;
@@ -58,6 +174,27 @@ header .nav-btn {
 
 header .snav-bar-menu {
   display: none;
+}
+
+header .drawer {
+  display: none;
+  background-color: #F4F4F4;
+}
+
+header .drawer #drawer-content {
+  background-color: #F4F4F4;
+}
+
+header .drawer #drawer-icon span::before {
+  background-color: #C88D95;
+}
+
+header .drawer #drawer-icon span {
+  background-color: #C88D95;
+}
+
+header .drawer #drawer-icon span::after {
+  background-color: #C88D95;
 }
 
 /* ======================================================
@@ -426,20 +563,7 @@ footer .copy {
   header {
     display: flex;
   }
-  header .nav-btn {
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-color: #F4F4F4;
-    cursor: pointer;
-  }
-  header .nav-btn i {
-    line-height: 60px;
-    font-size: 40px;
-    padding-left: 10px;
-    color: #C88D95;
-  }
-  header .nav-btn .snav-bar-menu {
+  header .drawer {
     display: block;
   }
   .secttion__one .container {

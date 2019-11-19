@@ -36,23 +36,8 @@ $sm: 576px;
 
         header{
             display: flex;
-            .nav-btn{
+            .drawer{
                 display: block;
-                width: 60px;
-                height: 60px;
-                background-color: $gnavi--color;
-                cursor: pointer;
-                i {
-                    line-height: 60px;
-                    font-size: 40px;
-                    padding-left: 10px;
-                    color: $btn--color;
-                }
-                &:active{ //ハンバーガーメニュー実装箇所
-                    
-                }.snav-bar-menu{
-                    display: block;
-                }
             }
         }
         .secttion__one{
@@ -122,10 +107,6 @@ $sm: 576px;
                     }
                 }
             }
-        }
-        .secttion__btn{
-        }
-        .gloabal-footer{
         }
     }
 }

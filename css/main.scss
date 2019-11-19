@@ -116,9 +116,9 @@
 
 body {
     font-family: 
-    "Times"
-    "ヒラギノ明朝 Pro"
-    "ヒラギノ明朝 ProN"
+    "Times",
+    "ヒラギノ明朝 Pro",
+    "ヒラギノ明朝 ProN",
     "sans-serif";
     background-color: $bg--color;
 }
@@ -151,6 +151,7 @@ a {
 ========================================================= */
 /* 初期確認用 */
 header{
+    @include Drawer;
     width: 100%;
     height: 60px;
     position: fixed;
@@ -163,7 +164,23 @@ header{
     }
     .snav-bar-menu{
         display: none;
-    }   
+    }
+    .drawer{
+        display: none;
+        background-color: $gnavi--color;
+        #drawer-content{ //ドロワーの出てくる箇所のパラメータ
+            background-color: $gnavi--color;
+        }
+        #drawer-icon span::before{ //ドロワーアイコンの色↓三つで共通
+            background-color: $btn--color;
+        }   
+        #drawer-icon span { //ドロワーアイコンの色↓三つで共通
+            background-color: $btn--color;
+        }
+        #drawer-icon span::after{ //ドロワーアイコンの色↓三つで共通
+            background-color: $btn--color;
+        }
+    }
 }
 
 
@@ -268,7 +285,6 @@ header{
 .secttion__three{
     width: 100%;
     /* 初期確認用 */
-
     .container{
         display: flex;
         flex-flow: row-reverse;
@@ -305,7 +321,6 @@ header{
 .secttion__four{
     width: 100%;
     /* 初期確認用 */
-
     .container{
         display: flex;
         justify-content: space-between;
