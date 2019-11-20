@@ -1,114 +1,7 @@
-// ================================================================================================
-// 目次
-// ①基本的な書き方(入れ子構造)
-// ②hoverやactiveする時の書き方
-// ③複数同名要素がある時の特定のクラスの指定
-// ④変数の定義 ※この定義よりも下でしか変数は使えない
-// ⑤mixin(コードを1つにまとめて、複数箇所で簡単に呼び出すことができる機能)
-// ⑥mixinは、使用したいSassファイルの中で「@include mixin名」とすることで使うことができる
-// ⑦mixinで引数を受け取れるようにする
-// ⑧便利な関数 例)色を操作する関数
-// ⑨外部ファイルの読み込み
-// ================================================================================================
-// ①基本的な書き方(入れ子構造)
-// .main {
-//     margin: 20px;
-//     h1 { // h1タグに対するコード(子要素はインデントを下げる)
-//       color: #f8f8f8;
-//     }
-//     p {  // pタグに対するコード(子要素はインデントを下げる)
-//       color: #efefef;
-//     }
-//   }
-// ②hoverやactiveする時の書き方
-// .button {
-//      ボタンのプロパティ
-//     &:hover{
-//       buttonにカーソルを合わせた時のコード
-//     }
-//     &:active{    
-//       buttonクリックした時のコード
-//     }
-//   }
-// }
-//
-// .main {
-//     margin: 20px;
-//     .title {
-//       省略
-//     }
-//     li {
-//       省略
-//       &.current-page{    ③複数同名要素がある時の特定のクラスの指定
-//         省略
-//       }
-//     }
-//   }
-// $wanko-color:#7579a3;    ④変数の定義 ※この定義よりも下でしか変数は使えない
-// .main {
-//     省略
-//     .title {
-//       color:$wanko-color; // 文字の色に変数$wanko-colorの値を指定してください
-//     }
-//   }
-//
-//⑤mixin(コードを1つにまとめて、複数箇所で簡単に呼び出すことができる機能)
-// @mixin circle{   //@mixin mixin名 { コード } で定義
-//     display: inline-block;
-//     border-radius: 50%;
-//     margin-left: 10px;
-//     text-align: center;
-//     background-color: #888888;
-//   }
-//⑥mixinは、使用したいSassファイルの中で「@include mixin名」とすることで使うことができる
-// .main {
-//     margin: 20px 10px;
-//     .small {
-//       @include circle; // ↑↑定義したcircleの呼び出し"circle"で定義されたプロパティが読み込まれる
-//       width: 34px;
-//       height: 34px;
-//     }
-//   }
-//
-//⑦mixinで引数を受け取れるようにする
-// @mixin circle($color) {  // 引数$colorを受け取れるようする
-//     display: inline-block;
-//     省略
-//     background-color: $color;    // 引数$colorを用いて背景色を変更
-//   }
-//   .main {
-//     margin: 20px 10px;
-//     .small {
-//       @include circle(#20efae); // 引数に「#20efae」を指定 ↑↑mixinのcircle($color)をcircle(#20efae)として使える
-//       width: 34px;
-//       height: 34px;
-//     }
-//   }
-// ⑧便利な関数 例)色を操作する関数
-// $blue: #0ac4ff;
-// .main {
-//     li {
-//       省略
-//     }
-//     .blue1 {
-//       background-color: $blue;
-//     }
-//     .blue2 {
-//       
-//       background-color:darken($blue,10%);    // 色を$blue、darken関数で値を10%暗くする
-//     }
-//     .blue3 {
-//       background-color:darken($blue,20%);    // 色を$blue、darken関数で値を20%暗くする
-//     }
-//   }
-// ⑨外部ファイルの読み込み
-// @import "variables"; 「_variables.scss」を読み込む ファイル名は先頭に"_"と末尾に拡張子scssが必要だが読み込み時は不要
-// 外部ファイルに変数やレスポンシブ用のmixinを定義しておいて使う
-// メインscssファイルはwebページの骨組み
-// 外部ファイルscssは共通パーツ(ブログカード)やフォント、レスポンシブ時の変化を記載しておく
-
+/* ======================================================
+共通パーツ読み込み
+========================================================= */
 @import "style";
-
 
 * {
     box-sizing: border-box;
@@ -134,7 +27,7 @@ a {
 .container{
     max-width:1180px;
     // width: 100%;
-    width: 92%;
+    width: 92.18%;
     height: 100%;
     margin: 0 auto;
 
@@ -143,7 +36,11 @@ a {
 .flex{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center;
+}
+
+.spbr{
+    display: none;
 }
 
 /* ======================================================
@@ -162,6 +59,11 @@ header{
         @include Btn('top');
         a {
             display: block;
+            font-size: 20px;
+            font-family: "ヒラギノ明朝 Pro";
+            line-height: 34px;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
     }
     .nav-btn{
@@ -204,7 +106,7 @@ header{
             .sns-icon{
                 color: $mfont--color;
                 padding-top: 40px;
-                font-size: 40px;
+                font-size: 30px;
             } i {
                 padding: 0 10px;
             }
@@ -224,7 +126,7 @@ header{
 .main{
     width: 100%;
     /* 初期確認用 */
-    top: 100px;
+    top: 60px;
     left: 0px;
 }
 
@@ -238,23 +140,36 @@ header{
     /* ヘッダー一固定調整用 */
     margin-top: 60px;
     // align-items: center;
+    // margin-bottom: 2px;
     } .gnavi {
+        .logo{
+            padding-top: 24px;
+        }
         .menu{
             background-color: $gnavi--color;
-            padding :60px 10px 70px 60px;
+            padding :6px 21px 60px 60px;
+            margin-top: 9px;
             margin-left: -60px;
-            ul li{
-                line-height: 24px;
-                font-size: 20px;
-                padding-bottom: 40px;
+            ul {
+                padding-top: 30px;
+                li{
+                    padding-top: 17px;
+                    padding-left: 18px;
+                    line-height: 24px;
+                    font-size: 20px;
+                    letter-spacing: 1px;
+                    font-weight: bold;
+                    padding-bottom: 20px;
+                }
             }
         } .sns {
-            padding :0px 30px 0 0;
-            font-size: 24px;
+            padding :35px 7px 0 15px;
+            font-size: 29px;
             display: flex;
             i{
-                padding-right: 30px;
-                padding-bottom: 30px;
+                padding-right: 25px;
+                padding-left: 5px;
+                padding-bottom: 0px;
             }
         }
     } .mv {
@@ -280,14 +195,15 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 140px;
+        padding-top: 123px;
         .content{
-            max-width: 550px;
+            max-width: 563px;
             min-width: 400px;
             width: 100%;
+            // margin-right: 108px;
             .heading{
                 @include Heading('before');
-                padding-bottom: 48px;
+                padding-bottom: 40px;
                 width: 100%;
             }
             .content__message{
@@ -296,9 +212,10 @@ header{
             }
         }
         .content-image {
-            width: 570px;
-            height: 380px;
+            width: 500px;
+            height: 333px;
             min-width: 400px;
+            margin-bottom: 16px;
             // text-align:center
             img{
                 width: 100%;
@@ -319,18 +236,20 @@ header{
         flex-flow: row-reverse;
         justify-content: space-between;
         align-items: center;
-        padding-top: 140px;
+        padding-top: 128px;
         .content{
             max-width: 550px;
             min-width: 400px;
             width: 100%;
             .heading{
                 @include Heading('after');
-                padding-bottom: 48px;
+                padding-top: 0px;
+                padding-bottom: 42px;
                 width: 100%;
             }
             .content__message{
                 @include Message('after');
+                padding-bottom: 40px;
                 width: 100%;
             }
         }
@@ -338,6 +257,7 @@ header{
             width: 570px;
             height: 380px;
             min-width: 400px;
+            // margin-bottom: 5px;
         } img {
             width: 100%;
         }
@@ -354,18 +274,23 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 140px;
+        padding-top: 138px;
         .content{
-            max-width: 550px;
+            max-width: 495px;
             min-width: 400px;
             width: 100%;
             .heading{
                 @include Heading('before');
-                padding-bottom: 48px;
+                h2{
+                    font-size: 36px;
+                    letter-spacing: 2.2px;
+                }
+                padding-bottom: 52px;
             }
             .content__menu{
-                width: 90%;
+                width: 99%;
                 margin: 0 auto;
+                padding-left: 15px;
                 @include Menu;
             }
             .Reservation{
@@ -374,7 +299,8 @@ header{
             }
         }
         .content-image {
-            padding-bottom: 37px;
+            // padding-bottom: 6px;
+            padding-left: 15px;
             // min-width: 60%;
             display: flex;
             flex-wrap: nowrap;
@@ -396,17 +322,21 @@ header{
 }
 
 .secttion__btn{
-    padding-bottom: 110px;
+    padding-top: 30px;
+    padding-bottom: 100px;
     .container{
         display: flex;
     }
     @include Btn('under');
     a{
         margin-right: 0;
-        margin-left: 120%;
+        margin-left: 131%;
         max-width: 224px;
         width: 100%;
         height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
         display: block;
         position: relative;
             z-index: 10;
@@ -451,32 +381,63 @@ footer{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 50px;
+        padding-top: 46px;
     }
     .fnavi{
-        width: 357px;
-        
+        width: 440px;
         .fnavi-column{
             display: flex;
             justify-content: space-between;
             padding-bottom: 30px;
+            padding-left: 100px;
             a{
                 color: $mfont--color;
+                font-size: 18px;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+            .left-box{
+                width: 75px;
+                text-align: left;
             }
         }
     }
-    .footer-logo{
-        padding-right: 100px;
+    .footer-logo-box{
+        // padding-top: 3px;
+        padding-right: 52px;
+        padding-bottom: 28px;
+        // width: 151px;
+        // height: 151px;
+        .footer-logo{
+            // width: 80%;
+            // width: 100%;
+            width: 74%;
+        }
     }
     .copy{
         text-align: right;
         padding-right: 100px;
+        p {
+            font-family: "ヒラギノ明朝 Pro";
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
     }
 }
 
-
+/* ======================================================
+レスポンシブ
+========================================================= */
 @import "responsive";
-
+/* ======================================================
+レスポンシブ・大
+========================================================= */
 @include lg($lg);
+/* ======================================================
+レスポンシブ・中
+========================================================= */
 @include md($md);
+/* ======================================================
+レスポンシブ・小
+========================================================= */
 @include sm($sm);

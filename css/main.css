@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* ======================================================
+共通パーツ読み込み
+========================================================= */
 * {
   box-sizing: border-box;
 }
@@ -18,7 +21,7 @@ a {
 
 .container {
   max-width: 1180px;
-  width: 92%;
+  width: 92.18%;
   height: 100%;
   margin: 0 auto;
 }
@@ -26,7 +29,10 @@ a {
 .flex {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+
+.spbr {
+  display: none;
 }
 
 /* ======================================================
@@ -170,6 +176,11 @@ header .Reservation .btn {
 
 header .Reservation a {
   display: block;
+  font-size: 20px;
+  font-family: "ヒラギノ明朝 Pro";
+  line-height: 34px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 header .nav-btn {
@@ -218,7 +229,7 @@ header .drawer #drawer-content .text-link a {
 header .drawer #drawer-content .sns-icon {
   color: #2B2B2B;
   padding-top: 40px;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 header .drawer #drawer-content i {
@@ -232,7 +243,7 @@ header .drawer #drawer-content i {
 .main {
   width: 100%;
   /* 初期確認用 */
-  top: 100px;
+  top: 60px;
   left: 0px;
 }
 
@@ -246,27 +257,41 @@ header .drawer #drawer-content i {
   margin-top: 60px;
 }
 
+.gnavi .logo {
+  padding-top: 24px;
+}
+
 .gnavi .menu {
   background-color: #F4F4F4;
-  padding: 60px 10px 70px 60px;
+  padding: 6px 21px 60px 60px;
+  margin-top: 9px;
   margin-left: -60px;
 }
 
+.gnavi .menu ul {
+  padding-top: 30px;
+}
+
 .gnavi .menu ul li {
+  padding-top: 17px;
+  padding-left: 18px;
   line-height: 24px;
   font-size: 20px;
-  padding-bottom: 40px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding-bottom: 20px;
 }
 
 .gnavi .sns {
-  padding: 0px 30px 0 0;
-  font-size: 24px;
+  padding: 35px 7px 0 15px;
+  font-size: 29px;
   display: flex;
 }
 
 .gnavi .sns i {
-  padding-right: 30px;
-  padding-bottom: 30px;
+  padding-right: 25px;
+  padding-left: 5px;
+  padding-bottom: 0px;
 }
 
 .mv {
@@ -294,17 +319,17 @@ header .drawer #drawer-content i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 140px;
+  padding-top: 123px;
 }
 
 .secttion__two .container .content {
-  max-width: 550px;
+  max-width: 563px;
   min-width: 400px;
   width: 100%;
 }
 
 .secttion__two .container .content .heading {
-  padding-bottom: 48px;
+  padding-bottom: 40px;
   width: 100%;
 }
 
@@ -315,6 +340,7 @@ header .drawer #drawer-content i {
   align-items: center;
   max-width: 560px;
   font-family: Times;
+  letter-spacing: 3px;
 }
 
 .secttion__two .container .content .heading h2:before {
@@ -336,13 +362,15 @@ header .drawer #drawer-content i {
   font-family: "Times";
   font-weight: Bold;
   color: #2B2B2B;
+  letter-spacing: 0.3px;
   text-align-last: right;
 }
 
 .secttion__two .container .content-image {
-  width: 570px;
-  height: 380px;
+  width: 500px;
+  height: 333px;
   min-width: 400px;
+  margin-bottom: 16px;
 }
 
 .secttion__two .container .content-image img {
@@ -362,7 +390,7 @@ header .drawer #drawer-content i {
   flex-flow: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding-top: 140px;
+  padding-top: 128px;
 }
 
 .secttion__three .container .content {
@@ -372,7 +400,8 @@ header .drawer #drawer-content i {
 }
 
 .secttion__three .container .content .heading {
-  padding-bottom: 48px;
+  padding-top: 0px;
+  padding-bottom: 42px;
   width: 100%;
 }
 
@@ -383,6 +412,7 @@ header .drawer #drawer-content i {
   align-items: center;
   max-width: 560px;
   font-family: Times;
+  letter-spacing: 3px;
 }
 
 .secttion__three .container .content .heading h2:after {
@@ -395,6 +425,7 @@ header .drawer #drawer-content i {
 }
 
 .secttion__three .container .content .content__message {
+  padding-bottom: 40px;
   width: 100%;
 }
 
@@ -404,6 +435,7 @@ header .drawer #drawer-content i {
   font-family: "Times";
   font-weight: Bold;
   color: #2B2B2B;
+  letter-spacing: 0.3px;
   text-align-last: left;
 }
 
@@ -429,17 +461,17 @@ header .drawer #drawer-content i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 140px;
+  padding-top: 138px;
 }
 
 .secttion__four .container .content {
-  max-width: 550px;
+  max-width: 495px;
   min-width: 400px;
   width: 100%;
 }
 
 .secttion__four .container .content .heading {
-  padding-bottom: 48px;
+  padding-bottom: 52px;
 }
 
 .secttion__four .container .content .heading h2 {
@@ -449,6 +481,7 @@ header .drawer #drawer-content i {
   align-items: center;
   max-width: 560px;
   font-family: Times;
+  letter-spacing: 3px;
 }
 
 .secttion__four .container .content .heading h2:before {
@@ -460,29 +493,46 @@ header .drawer #drawer-content i {
   margin-right: 30px;
 }
 
+.secttion__four .container .content .heading h2 {
+  font-size: 36px;
+  letter-spacing: 2.2px;
+}
+
 .secttion__four .container .content .content__menu {
-  width: 90%;
+  width: 99%;
   margin: 0 auto;
+  padding-left: 15px;
 }
 
 .secttion__four .container .content .content__menu .course {
   display: flex;
   border-bottom: 1px solid #8B8B8B;
   font-size: 18px;
-  padding-bottom: 7px;
-  margin-bottom: 18px;
+  letter-spacing: 3px;
+  padding-bottom: 2px;
+  margin-bottom: 26px;
 }
 
 .secttion__four .container .content .content__menu .course .course-item {
-  padding-left: 15px;
+  padding-left: 26px;
   margin-left: 0;
   margin-right: auto;
 }
 
+.secttion__four .container .content .content__menu .course .course-item p {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
 .secttion__four .container .content .content__menu .course .course-price {
-  padding-right: 15px;
+  padding-right: 20px;
   margin-right: 0;
   margin-left: auto;
+  font-weight: bold;
+}
+
+.secttion__four .container .content .content__menu .course .course-price p {
+  font-weight: bold;
 }
 
 .secttion__four .container .content .Reservation {
@@ -499,7 +549,7 @@ header .drawer #drawer-content i {
 }
 
 .secttion__four .container .content-image {
-  padding-bottom: 37px;
+  padding-left: 15px;
   display: flex;
   flex-wrap: nowrap;
   width: 570px;
@@ -520,7 +570,8 @@ header .drawer #drawer-content i {
 }
 
 .secttion__btn {
-  padding-bottom: 110px;
+  padding-top: 30px;
+  padding-bottom: 100px;
 }
 
 .secttion__btn .container {
@@ -537,10 +588,13 @@ header .drawer #drawer-content i {
 
 .secttion__btn a {
   margin-right: 0;
-  margin-left: 120%;
+  margin-left: 131%;
   max-width: 224px;
   width: 100%;
   height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
   display: block;
   position: relative;
   z-index: 10;
@@ -577,25 +631,39 @@ footer .gloabal-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 46px;
 }
 
 footer .fnavi {
-  width: 357px;
+  width: 440px;
 }
 
 footer .fnavi .fnavi-column {
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px;
+  padding-left: 100px;
 }
 
 footer .fnavi .fnavi-column a {
   color: #2B2B2B;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-footer .footer-logo {
-  padding-right: 100px;
+footer .fnavi .fnavi-column .left-box {
+  width: 75px;
+  text-align: left;
+}
+
+footer .footer-logo-box {
+  padding-right: 52px;
+  padding-bottom: 28px;
+}
+
+footer .footer-logo-box .footer-logo {
+  width: 74%;
 }
 
 footer .copy {
@@ -603,6 +671,18 @@ footer .copy {
   padding-right: 100px;
 }
 
+footer .copy p {
+  font-family: "ヒラギノ明朝 Pro";
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* ======================================================
+レスポンシブ
+========================================================= */
+/* ======================================================
+レスポンシブ・大
+========================================================= */
 @media all and (max-width: 1080px) {
   .pcbr {
     display: none;
@@ -667,6 +747,9 @@ footer .copy {
   }
 }
 
+/* ======================================================
+レスポンシブ・中
+========================================================= */
 @media all and (max-width: 873px) {
   .secttion__two {
     box-sizing: border-box;
@@ -747,6 +830,9 @@ footer .copy {
   }
 }
 
+/* ======================================================
+レスポンシブ・小
+========================================================= */
 @media all and (max-width: 576px) {
   .container {
     width: 92%;
@@ -844,7 +930,7 @@ footer .copy {
   }
   footer .gloabal-footer .fnavi {
     margin: 0 auto;
-    width: 66%;
+    width: 70%;
   }
   footer .gloabal-footer .fnavi p {
     font-size: 16px;

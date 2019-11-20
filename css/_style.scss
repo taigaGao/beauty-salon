@@ -16,9 +16,6 @@ $under--color: #8B8B8B;
 // コピーライト// #797979
 $copy--color: #797979;
 
-// フォント
-// Times
-// ヒラギノ明朝 Pro
 
 
 //セクション分割ライン
@@ -30,6 +27,7 @@ $copy--color: #797979;
         align-items: center;
         max-width: 560px;
         font-family: Times;
+        letter-spacing: 3px;
     } @if $before == before {
         h2:before{
             content: "";
@@ -51,6 +49,7 @@ $copy--color: #797979;
     }
 }
 
+//ヘディング(右向きと左向きの分岐)
 @mixin Message($before) {
     p{
         font-size: 18px;
@@ -58,6 +57,7 @@ $copy--color: #797979;
         font-family: "Times";
         font-weight: Bold;
         color: $mfont--color;
+        letter-spacing: 0.3px;
         @if $before == before {
             text-align-last: right;
         } @else {
@@ -66,26 +66,39 @@ $copy--color: #797979;
     }
 }
 
+//コース内容・値段部分
 @mixin Menu {
     .course{
         display: flex;
         border-bottom: 1px solid $under--color;
         font-size: 18px;
-        padding-bottom: 7px;
-        margin-bottom: 18px;
+        letter-spacing: 3px;
+        padding-bottom: 2px;
+        margin-bottom: 26px;
         .course-item{
-            padding-left: 15px;
+            padding-left: 26px;
+            // padding-bottom: 1px;
+            
             margin-left: 0;
             margin-right: auto;
+            p{
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
         }
         .course-price{
-            padding-right: 15px;
+            padding-right: 20px;
             margin-right: 0;
             margin-left: auto;
+            font-weight: bold;
+            p{
+                font-weight: bold;
+            }
         }
     }
 }
 
+//予約ボタン
 @mixin Btn($position){
     .btn {
         background-color: $btn--color;
@@ -102,6 +115,7 @@ $copy--color: #797979;
         }
 }
 
+//レスポンスドロワー
 @mixin Drawer {
     .drawer{
         #drawer-checkbox {
