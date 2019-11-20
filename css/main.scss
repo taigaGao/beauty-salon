@@ -60,7 +60,7 @@ header{
         a {
             display: block;
             font-size: 20px;
-            font-family: "ヒラギノ明朝 Pro";
+            font-family: "ヒラギノ明朝 ProN";
             line-height: 34px;
             font-weight: bold;
             letter-spacing: 1px;
@@ -75,18 +75,34 @@ header{
     .drawer{
         display: none;
         background-color: $gnavi--color;
+        // padding-top: 5px;
+        // padding-right: 12px;
+        // padding-left: 12px;
         #drawer-content{
             background-color: $gnavi--color; //ドロワーのコンテンツ部分の背景色
-            height: 370px;
         }
         #drawer-icon span::before{
             background-color: $btn--color; //ドロワーアイコンの色↓三つで共通１
+            margin-top: -39%; //中心からの距離上線
         }   
         #drawer-icon span {
             background-color: $btn--color; //ドロワーアイコンの色↓三つで共通２
+            height: 8%; //ドロワーアイコンの線の太さ
+            left: 52%; //ドロワーアイコンの左からの位置
+            margin: -8% 0 0 -35%;
+            top: 53%; //ドロワーアイコン全体の高さ
+            width: 64%;
+            border-radius: 19px;
+            // height: 16%;
+            // left: 50%;
+            // margin: -8% 0 0 -42%;
+            // top: 50%;
+            // width: 84%;
         }
         #drawer-icon span::after{
             background-color: $btn--color; //ドロワーアイコンの色↓三つで共通３
+            // background-color: red; //ドロワーアイコンの色↓三つで共通３
+            margin-top: 23%; //中心からの距離下線
         }
         #drawer-content{
             // display: flex;
@@ -150,6 +166,7 @@ header{
             padding :6px 21px 60px 60px;
             margin-top: 9px;
             margin-left: -60px;
+            color: $mfont--color;
             ul {
                 padding-top: 30px;
                 li{
@@ -384,7 +401,8 @@ footer{
         padding-top: 46px;
     }
     .fnavi{
-        width: 440px;
+        max-width: 438px;
+        width: 100%;    
         .fnavi-column{
             display: flex;
             justify-content: space-between;
@@ -421,6 +439,7 @@ footer{
             font-family: "ヒラギノ明朝 Pro";
             font-size: 12px;
             letter-spacing: 2px;
+            color: $copy--color;
         }
     }
 }

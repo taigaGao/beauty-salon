@@ -177,7 +177,7 @@ header .Reservation .btn {
 header .Reservation a {
   display: block;
   font-size: 20px;
-  font-family: "ヒラギノ明朝 Pro";
+  font-family: "ヒラギノ明朝 ProN";
   line-height: 34px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -198,19 +198,26 @@ header .drawer {
 
 header .drawer #drawer-content {
   background-color: #F4F4F4;
-  height: 370px;
 }
 
 header .drawer #drawer-icon span::before {
   background-color: #C88D95;
+  margin-top: -39%;
 }
 
 header .drawer #drawer-icon span {
   background-color: #C88D95;
+  height: 8%;
+  left: 52%;
+  margin: -8% 0 0 -35%;
+  top: 53%;
+  width: 64%;
+  border-radius: 19px;
 }
 
 header .drawer #drawer-icon span::after {
   background-color: #C88D95;
+  margin-top: 23%;
 }
 
 header .drawer #drawer-content .text-link {
@@ -266,6 +273,7 @@ header .drawer #drawer-content i {
   padding: 6px 21px 60px 60px;
   margin-top: 9px;
   margin-left: -60px;
+  color: #2B2B2B;
 }
 
 .gnavi .menu ul {
@@ -635,7 +643,8 @@ footer .gloabal-footer {
 }
 
 footer .fnavi {
-  width: 440px;
+  max-width: 438px;
+  width: 100%;
 }
 
 footer .fnavi .fnavi-column {
@@ -675,6 +684,7 @@ footer .copy p {
   font-family: "ヒラギノ明朝 Pro";
   font-size: 12px;
   letter-spacing: 2px;
+  color: #797979;
 }
 
 /* ======================================================
@@ -821,6 +831,9 @@ footer .copy p {
   .secttion__btn {
     display: none;
   }
+  footer .footer-logo-box {
+    padding-right: 0;
+  }
   footer .footer-logo {
     padding-right: 0px;
   }
@@ -834,6 +847,9 @@ footer .copy p {
 レスポンシブ・小
 ========================================================= */
 @media all and (max-width: 576px) {
+  .spbr {
+    display: block;
+  }
   .container {
     width: 92%;
   }
@@ -842,18 +858,31 @@ footer .copy p {
   }
   header .Reservation .btn {
     width: 157px;
+    padding: 0px 10px;
+    font-size: 16px;
+  }
+  header .drawer {
+    padding: 5px 5px;
   }
   header .drawer #drawer-content {
     width: 217px;
+    padding-left: 10px;
   }
   .secttion__two .container {
-    padding-top: 70px;
+    padding-top: 74px;
   }
   .secttion__two .container .content {
     min-width: 100px;
   }
+  .secttion__two .container .content .heading h2 {
+    font-size: 30px;
+  }
+  .secttion__two .container .content .heading h2:before {
+    margin-right: 10px;
+  }
   .secttion__two .container .content .content__message p {
     font-size: 16px;
+    line-height: 32px;
   }
   .secttion__two .container .content .heading {
     padding-bottom: 24px;
@@ -866,13 +895,19 @@ footer .copy p {
     min-width: 100px;
   }
   .secttion__three .container {
-    padding-top: 70px;
+    padding-top: 58px;
   }
   .secttion__three .container .content {
+    margin-bottom: 0;
     min-width: 100px;
+  }
+  .secttion__three .container .content .heading h2 {
+    font-size: 30px;
+    letter-spacing: 1.8px;
   }
   .secttion__three .container .content .content__message p {
     font-size: 16px;
+    line-height: 31px;
   }
   .secttion__three .container .content .heading {
     padding-bottom: 24px;
@@ -882,40 +917,64 @@ footer .copy p {
   }
   .secttion__four .container {
     padding-top: 70px;
+    padding-bottom: 70px;
     min-width: 100px;
   }
   .secttion__four .container .content {
     min-width: 100px;
+  }
+  .secttion__four .container .content .heading h2 {
+    font-size: 30px;
+    margin-bottom: 26px;
+  }
+  .secttion__four .container .content .heading h2:before {
+    margin-right: 50px;
   }
   .secttion__four .container .content .heading {
     padding-bottom: 24px;
   }
   .secttion__four .container .content .content__menu {
     width: 100%;
+    padding-left: 0;
   }
   .secttion__four .container .content .content__menu .course {
     padding: 0 10px;
-    padding-bottom: 20px;
+    padding-bottom: 9px;
+    margin-bottom: 22px;
+  }
+  .secttion__four .container .content .content__menu .course p {
+    font-size: 16px;
+  }
+  .secttion__four .container .content .content__menu .course .course-item {
+    padding-left: 12px;
+    letter-spacing: 2px;
+  }
+  .secttion__four .container .content .content__menu .course .course-price {
+    padding-right: 14px;
+    letter-spacing: 0.7px;
   }
   .secttion__four .container .content .Reservation {
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
   }
   .secttion__four .container .content .Reservation a {
-    padding: 20px 20px;
+    padding: 17px 38px;
+    font-size: bold;
   }
   .secttion__four .container .content-image {
     min-width: 100px;
+    padding-left: 0;
   }
   .secttion__four .container .image-box {
-    width: 44%;
+    width: 48.2%;
     min-width: 0px;
   }
   .secttion__four .container .image-box .image-one {
     width: 100%;
     min-width: 0px;
-    padding-right: 10px;
+    padding-right: 0;
+    padding-top: 70px;
   }
   .secttion__four .container .image-box .image-two {
     width: 100%;
@@ -927,19 +986,38 @@ footer .copy p {
   footer .gloabal-footer {
     display: flex;
     flex-wrap: wrap-reverse;
+    padding-top: 30px;
   }
   footer .gloabal-footer .fnavi {
     margin: 0 auto;
     width: 70%;
+    padding-left: 0;
+  }
+  footer .gloabal-footer .fnavi .fnavi-column {
+    padding-left: 0;
+    padding-bottom: 16px;
   }
   footer .gloabal-footer .fnavi p {
-    font-size: 16px;
-    letter-spacing: 0px;
-  }
-  footer .gloabal-footer .footer-logo {
-    width: 120px;
-    height: 150px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
     margin: 0 auto;
-    padding-bottom: 30px;
+  }
+  footer .gloabal-footer .footer-logo-box {
+    width: 150px;
+    height: 140px;
+    margin: 0 auto;
+    padding-bottom: 0px;
+    text-align: center;
+  }
+  footer .footer-logo-box {
+    padding-right: 0px;
+  }
+  footer .copy {
+    padding-top: 12px;
+  }
+  footer .copy p {
+    font-size: 10px;
+    padding-bottom: 15px;
+    letter-spacing: 1.6px;
   }
 }
