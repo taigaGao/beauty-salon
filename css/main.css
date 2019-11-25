@@ -194,6 +194,8 @@ header .snav-bar-menu {
 header .drawer {
   display: none;
   background-color: #F4F4F4;
+  padding: 0 5px;
+  padding-top: 5px;
 }
 
 header .drawer #drawer-content {
@@ -207,17 +209,17 @@ header .drawer #drawer-icon span::before {
 
 header .drawer #drawer-icon span {
   background-color: #C88D95;
-  height: 8%;
-  left: 52%;
+  height: 8.5%;
+  left: 52.6%;
   margin: -8% 0 0 -35%;
-  top: 53%;
+  top: 51%;
   width: 64%;
   border-radius: 19px;
 }
 
 header .drawer #drawer-icon span::after {
   background-color: #C88D95;
-  margin-top: 23%;
+  margin-top: 25%;
 }
 
 header .drawer #drawer-content .text-link {

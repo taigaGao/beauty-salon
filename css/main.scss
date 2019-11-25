@@ -75,6 +75,8 @@ header{
     .drawer{
         display: none;
         background-color: $gnavi--color;
+        padding: 0 5px;
+        padding-top: 5px;
         // padding-top: 5px;
         // padding-right: 12px;
         // padding-left: 12px;
@@ -87,10 +89,10 @@ header{
         }   
         #drawer-icon span {
             background-color: $btn--color; //ドロワーアイコンの色↓三つで共通２
-            height: 8%; //ドロワーアイコンの線の太さ
-            left: 52%; //ドロワーアイコンの左からの位置
+            height: 8.5%; //ドロワーアイコンの線の太さ
+            left: 52.6%; //ドロワーアイコンの左からの位置
             margin: -8% 0 0 -35%;
-            top: 53%; //ドロワーアイコン全体の高さ
+            top: 51%; //ドロワーアイコン全体の高さ
             width: 64%;
             border-radius: 19px;
             // height: 16%;
@@ -102,7 +104,7 @@ header{
         #drawer-icon span::after{
             background-color: $btn--color; //ドロワーアイコンの色↓三つで共通３
             // background-color: red; //ドロワーアイコンの色↓三つで共通３
-            margin-top: 23%; //中心からの距離下線
+            margin-top: 25%; //中心からの距離下線
         }
         #drawer-content{
             // display: flex;
